@@ -1,1 +1,171 @@
 
+clear
+
+
+
+while true;
+
+
+do
+
+clear
+echo ""
+echo -e "\033[0;30;47m Reproductor streaming \033[0m - based on mpv and yt-dlp"
+echo ""
+echo ""
+echo -e "Salir/Stop: opción 3 | [CTRL+C]\n"
+echo -e "Minimizar: [CTRL+Z]\n"
+echo -e "Detener: pkill -9 mpv"
+echo ""
+echo ""
+
+echo "[1] Reproducir"
+echo ""
+echo "[2] Detener reproducción"
+echo ""
+echo "[3] Salir"
+echo ""
+read -p "[-] Digite selección: " -e slc
+
+
+
+
+
+
+case $slc in
+
+
+1)
+
+
+echo ""
+echo ""
+
+
+
+
+echo -e "Plataforma: \033[30;47mYou\033[0m\033[37;41mTube\033[0m"
+echo ""
+
+
+
+
+
+
+
+
+
+echo ""
+echo "[-] Ejemplo: In the end - Linkin park"
+echo ""
+echo ""
+
+
+
+
+
+
+
+
+
+read -p "Buscar: " -e titulo_de_busqueda
+
+
+echo ""
+
+
+echo ""
+echo ""
+
+
+ids=$(yt-dlp ytsearch:"$titulo_de_busqueda" --print "%(id)s" --no-warnings --output-na-placeholder "[unknown]")
+titulo=$(yt-dlp --print "%(title)s" --no-warnings "https://m.youtube.com/watch?v=$ids" --output-na-placeholder "[unknown]")
+
+
+ids_texto=$(echo "$ids")
+
+echo -e "TITULO: $titulo"
+echo -e "\nURL:  https://m.youtube.com/watch?v=$ids_texto\n\n\n"
+
+
+
+echo "[Reproduciendo Audio-Streaming]"
+
+
+echo ""
+echo ""
+
+
+mpv https://m.youtube.com/watch?v=$ids
+echo ""
+echo ""
+
+echo "[Finalizo reproducción streaming]"
+
+echo ""
+echo ""
+exit
+break
+
+
+
+
+;;
+
+2)
+
+
+
+pkill -9 mpv
+echo ""
+echo ""
+
+
+echo "[Saliendo de reproductor streaming]"
+
+
+
+echo ""
+exit
+
+break
+
+;;
+
+
+3)
+
+
+
+echo ""
+echo ""
+
+
+echo "[Saliendo de reproductor streaming]"
+
+
+
+echo ""
+
+
+exit
+
+break
+
+
+
+
+
+;;
+
+
+
+
+*) echo ""
+
+;;
+
+
+esac
+break
+done
