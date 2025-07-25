@@ -1,6 +1,6 @@
 # Reproductor-streaming
 
-<h2>INSTALACIÓN Y EJECUCIÓN</h2>
+<h2>INSTALACIÓN</h2>
 
 ```bash
 yes | termux-setup-storage
@@ -23,6 +23,8 @@ yes | pkg install git
 ```bash
 git clone https://github.com/wolfkrypter/Reproductor-streaming.git && cd Reproductor-streaming && chmod +x stream && mv stream $PATH
 ```
+<h2>EJECUCIÓN</h2>
+
 ```bash
 stream
 ```
