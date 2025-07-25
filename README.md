@@ -1,5 +1,5 @@
 # Reproductor-streaming
-
+Shell script que reproduce música online de YouTube mediante mpv y yt-dlp.
 <h2>INSTALACIÓN</h2>
 
 ```bash
