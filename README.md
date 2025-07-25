@@ -28,7 +28,7 @@ git clone https://github.com/wolfkrypter/Reproductor-streaming.git && cd Reprodu
 ```bash
 stream
 ```
-
+<a href="https://freeimage.host/i/Fk6FeAx"><img src="https://iili.io/Fk6FeAx.md.png" alt="Fk6FeAx.md.png" border="0"></a>
 
 <h2>DESINSTALACIÓN</h2>
 
